@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindBreath - Índice de Calma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌬️ MindBreath</h1>
+    <p>Descubre tu nivel de calma y aprende a controlar tu respiración y tu mente.</p>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>🧘 Analiza tu estado actual</h2>
+
+      <label for="respiraciones">Respiraciones por minuto:</label>
+      <input type="number" id="respiraciones" placeholder="Ej: 16" min="5" />
+
+      <label for="suenio">Horas de sueño:</label>
+      <input type="number" id="suenio" placeholder="Ej: 7" min="0" />
+
+      <label for="agua">Vasos de agua tomados:</label>
+      <input type="number" id="agua" placeholder="Ej: 6" min="0" />
+
+      <label for="animo">¿Cómo te sientes hoy?</label>
+      <select id="animo">
+        <option value="estresado">Estresado 😣</option>
+        <option value="neutral">Neutral 😐</option>
+        <option value="relajado">Relajado 😌</option>
+      </select>
+
+      <button onclick="calcularCalma()">Calcular Índice de Calma</button>
+    </section>
+
+    <section id="resultado" class="resultado oculto">
+      <h2>💚 Tu Índice de Calma</h2>
+      <div class="indicador">
+        <div id="valorIC">0</div>
+      </div>
+      <p id="mensaje"></p>
+
+      <div class="tips">
+        <h3>🪶 Recomendaciones personalizadas</h3>
+        <ul id="listaTips"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MindBreath - Respira, calma y vive 🌿</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
